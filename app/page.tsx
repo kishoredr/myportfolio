@@ -3,6 +3,8 @@
 import { motion } from "framer-motion"
 import { ArrowRight, Download, Mail, TrendingUp, Zap, Shield, DollarSign } from "lucide-react"
 import Link from "next/link"
+// Import icons from react-aws-icons (already installed)
+import AWSIcon from 'react-aws-icons/dist/aws/logo/AWS'
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -15,7 +17,7 @@ const stats = [
 ]
 
 const tools = [
-  { name: "AWS", logo: "react-aws-icons" },
+  { name: "AWS", logo: AWSIcon }, // Now using the actual icon component
   { name: "Kubernetes", logo: "☸️" },
   { name: "Terraform", logo: "🏗️" },
   { name: "Helm", logo: "⚓" },
@@ -142,21 +144,33 @@ export default function HomePage() {
               viewport={{ once: true }}
               className="mt-12 grid grid-cols-4 gap-8 sm:grid-cols-8"
             >
-              {tools.map((tool, index) => (
-                <motion.div
-                  key={tool.name}
-                  initial={{ opacity: 0, scale: 0.8 }}
-                  whileInView={{ opacity: 1, scale: 1 }}
-                  transition={{ duration: 0.3, delay: index * 0.1 }}
-                  viewport={{ once: true }}
-                  className="flex flex-col items-center space-y-2"
-                >
-                  <div className="text-4xl">{tool.logo}</div>
-                  <span className="text-xs font-medium text-muted-foreground text-center">
-                    {tool.name}
-                  </span>
-                </motion.div>
-              ))}
+              {tools.map((tool, index) => {
+                // Check if logo is a React component or string
+                const isComponent = typeof tool.logo === 'function'
+                const IconComponent = tool.logo
+                
+                return (
+                  <motion.div
+                    key={tool.name}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    whileInView={{ opacity: 1, scale: 1 }}
+                    transition={{ duration: 0.3, delay: index * 0.1 }}
+                    viewport={{ once: true }}
+                    className="flex flex-col items-center space-y-2"
+                  >
+                    <div className="text-4xl flex items-center justify-center">
+                      {isComponent ? (
+                        <IconComponent size={40} />
+                      ) : (
+                        <span>{tool.logo}</span>
+                      )}
+                    </div>
+                    <span className="text-xs font-medium text-muted-foreground text-center">
+                      {tool.name}
+                    </span>
+                  </motion.div>
+                )
+              })}
             </motion.div>
           </motion.div>
         </div>
