@@ -1,11 +1,11 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { ArrowRight, Download, Mail, TrendingUp, Zap, Shield, DollarSign } from "lucide-react"
+import { ArrowRight, Mail, TrendingUp, Zap, Shield, DollarSign } from "lucide-react"
 import Link from "next/link"
-// Import all technology icons from react-icons (Simple Icons)
+// Fixed react-icons imports with correct names
 import { 
-  SiAmazonaws,
+  SiAmazonwebservices,
   SiKubernetes, 
   SiTerraform, 
   SiHelm, 
@@ -26,14 +26,14 @@ const stats = [
 ]
 
 const tools = [
-  { name: "AWS", logo: SiAmazonaws }, // AWS logo from react-icons
-  { name: "Kubernetes", logo: SiKubernetes }, // Original Kubernetes logo
-  { name: "Terraform", logo: SiTerraform }, // Original Terraform logo
-  { name: "Helm", logo: SiHelm }, // Original Helm logo
-  { name: "Docker", logo: SiDocker }, // Original Docker logo
-  { name: "GitHub Actions", logo: SiGithubactions }, // Original GitHub Actions logo
-  { name: "Prometheus", logo: SiPrometheus }, // Original Prometheus logo
-  { name: "Grafana", logo: SiGrafana }, // Original Grafana logo
+  { name: "AWS", logo: SiAmazonwebservices }, // Corrected import name
+  { name: "Kubernetes", logo: SiKubernetes },
+  { name: "Terraform", logo: SiTerraform },
+  { name: "Helm", logo: SiHelm },
+  { name: "Docker", logo: SiDocker },
+  { name: "GitHub Actions", logo: SiGithubactions },
+  { name: "Prometheus", logo: SiPrometheus },
+  { name: "Grafana", logo: SiGrafana },
 ]
 
 export default function HomePage() {
