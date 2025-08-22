@@ -3,8 +3,17 @@
 import { motion } from "framer-motion"
 import { ArrowRight, Download, Mail, TrendingUp, Zap, Shield, DollarSign } from "lucide-react"
 import Link from "next/link"
-// Import icons from react-aws-icons (already installed)
-import AWSIcon from 'react-aws-icons/dist/aws/logo/AWS'
+// Import all technology icons from react-icons (Simple Icons)
+import { 
+  SiAmazonaws,
+  SiKubernetes, 
+  SiTerraform, 
+  SiHelm, 
+  SiDocker, 
+  SiGithubactions, 
+  SiPrometheus, 
+  SiGrafana 
+} from 'react-icons/si'
 
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -17,14 +26,14 @@ const stats = [
 ]
 
 const tools = [
-  { name: "AWS", logo: AWSIcon }, // Now using the actual icon component
-  { name: "Kubernetes", logo: "☸️" },
-  { name: "Terraform", logo: "🏗️" },
-  { name: "Helm", logo: "⚓" },
-  { name: "Docker", logo: "🐳" },
-  { name: "GitHub Actions", logo: "⚡" },
-  { name: "Prometheus", logo: "📊" },
-  { name: "Grafana", logo: "📈" },
+  { name: "AWS", logo: SiAmazonaws }, // AWS logo from react-icons
+  { name: "Kubernetes", logo: SiKubernetes }, // Original Kubernetes logo
+  { name: "Terraform", logo: SiTerraform }, // Original Terraform logo
+  { name: "Helm", logo: SiHelm }, // Original Helm logo
+  { name: "Docker", logo: SiDocker }, // Original Docker logo
+  { name: "GitHub Actions", logo: SiGithubactions }, // Original GitHub Actions logo
+  { name: "Prometheus", logo: SiPrometheus }, // Original Prometheus logo
+  { name: "Grafana", logo: SiGrafana }, // Original Grafana logo
 ]
 
 export default function HomePage() {
@@ -145,8 +154,6 @@ export default function HomePage() {
               className="mt-12 grid grid-cols-4 gap-8 sm:grid-cols-8"
             >
               {tools.map((tool, index) => {
-                // Check if logo is a React component or string
-                const isComponent = typeof tool.logo === 'function'
                 const IconComponent = tool.logo
                 
                 return (
@@ -159,11 +166,7 @@ export default function HomePage() {
                     className="flex flex-col items-center space-y-2"
                   >
                     <div className="text-4xl flex items-center justify-center">
-                      {isComponent ? (
-                        <IconComponent size={40} />
-                      ) : (
-                        <span>{tool.logo}</span>
-                      )}
+                      <IconComponent className="w-10 h-10 text-primary" />
                     </div>
                     <span className="text-xs font-medium text-muted-foreground text-center">
                       {tool.name}
