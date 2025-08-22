@@ -43,7 +43,7 @@ export function Footer() {
           <div className="space-y-8 xl:col-span-1">
             <Link href="/" className="flex items-center space-x-2">
               <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-emerald-500 to-blue-600" />
-              <span className="text-xl font-bold gradient-text">YourName</span>
+              <span className="text-xl font-bold gradient-text">Kishore D R</span>
             </Link>
             <p className="text-sm text-muted-foreground">
               DevOps Engineer focused on building scalable infrastructure and automation solutions.
@@ -124,7 +124,7 @@ export function Footer() {
         </div>
         <div className="mt-12 border-t border-border pt-8">
           <p className="text-sm text-muted-foreground text-center">
-            © {new Date().getFullYear()} YourName. All rights reserved. Built with Next.js and Tailwind CSS.
+            © {new Date().getFullYear()} Kishore D R. All rights reserved. Built with Next.js and Tailwind CSS.
           </p>
         </div>
       </div>

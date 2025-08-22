@@ -34,7 +34,7 @@ export function Header() {
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
             />
-            <span className="text-xl font-bold gradient-text">YourName</span>
+            <span className="text-xl font-bold gradient-text">Kishore D R</span>
           </Link>
         </div>
 

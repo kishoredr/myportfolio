@@ -8,14 +8,14 @@ import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 
 const stats = [
-  { label: "Years Experience", value: "5+", icon: TrendingUp },
-  { label: "Projects Delivered", value: "50+", icon: Zap },
+  { label: "Years Experience", value: "9+", icon: TrendingUp },
+  { label: "Projects Delivered", value: "150+", icon: Zap },
   { label: "Uptime Achieved", value: "99.95%", icon: Shield },
   { label: "Cost Savings", value: "$2M+", icon: DollarSign },
 ]
 
 const tools = [
-  { name: "AWS", logo: "🔷" },
+  { name: "AWS", logo: "react-aws-icons" },
   { name: "Kubernetes", logo: "☸️" },
   { name: "Terraform", logo: "🏗️" },
   { name: "Helm", logo: "⚓" },
