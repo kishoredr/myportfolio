@@ -1,3 +1,5 @@
+"use client"
+
 import { motion } from "framer-motion"
 import { ArrowRight, Download, Mail, TrendingUp, Zap, Shield, DollarSign } from "lucide-react"
 import Link from "next/link"
