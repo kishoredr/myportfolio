@@ -9,6 +9,7 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { cn } from "@/lib/utils"
+import { DevOpsLogo } from "@/components/devops-logo"
 
 const navigation = [
   { name: "Home", href: "/" },
@@ -29,11 +30,12 @@ export function Header() {
       <nav className="container mx-auto flex h-16 items-center justify-between px-4 sm:px-6 lg:px-8">
         <div className="flex items-center">
           <Link href="/" className="flex items-center space-x-2">
-            <motion.div
-              className="h-8 w-8 rounded-lg bg-gradient-to-br from-emerald-500 to-blue-600"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            />
+           <motion.div
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+          <DevOpsLogo size={32} />
+          </motion.div>
             <span className="text-xl font-bold gradient-text">Kishore D R</span>
           </Link>
         </div>

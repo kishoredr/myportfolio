@@ -5,6 +5,7 @@ import { ThemeProvider } from '@/components/theme-provider'
 import { Header } from '@/components/header'
 import { Footer } from '@/components/footer'
 import { Toaster } from '@/components/ui/toaster'
+import { ClientWrapper } from '@/components/client-wrapper'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -12,8 +13,8 @@ export const metadata: Metadata = {
   title: 'DevOps Engineer Portfolio',
   description: 'DevOps Engineer focused on EKS, Terraform, and production reliability. Building scalable infrastructure and automation solutions.',
   keywords: ['DevOps', 'SRE', 'AWS', 'Kubernetes', 'Terraform', 'CI/CD', 'Cloud Engineering'],
-  authors: [{ name: 'Your Name' }],
-  creator: 'Your Name',
+  authors: [{ name: 'Kishore D R' }],
+  creator: 'Kishore D R',
   openGraph: {
     type: 'website',
     locale: 'en_US',
@@ -57,14 +58,16 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <div className="min-h-screen bg-background">
-            <Header />
-            <main className="flex-1">
-              {children}
-            </main>
-            <Footer />
-          </div>
-          <Toaster />
+          <ClientWrapper>
+            <div className="min-h-screen bg-background">
+              <Header />
+              <main className="flex-1">
+                {children}
+              </main>
+              <Footer />
+            </div>
+            <Toaster />
+          </ClientWrapper>
         </ThemeProvider>
       </body>
     </html>

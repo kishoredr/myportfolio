@@ -2,6 +2,7 @@ import Link from "next/link"
 import { Github, Linkedin, Twitter, Mail, Rss } from "lucide-react"
 
 import { cn } from "@/lib/utils"
+import { DevOpsLogo } from "@/components/devops-logo"
 
 const navigation = {
   main: [
@@ -42,7 +43,7 @@ export function Footer() {
         <div className="xl:grid xl:grid-cols-3 xl:gap-8">
           <div className="space-y-8 xl:col-span-1">
             <Link href="/" className="flex items-center space-x-2">
-              <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-emerald-500 to-blue-600" />
+             <DevOpsLogo size={32} />
               <span className="text-xl font-bold gradient-text">Kishore D R</span>
             </Link>
             <p className="text-sm text-muted-foreground">
